@@ -1,0 +1,36 @@
+body{
+  background:rgb(85, 196, 233); 
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  }
+  
+  h1{color: blue; 
+    font-family: verdana; 
+    font-size: 300%;
+}
+  p{color: red;
+    font-family: courier;
+    font-size: 160%;
+    border: 5px solid powderblue;
+    padding: 100px;
+    margin: 10%;
+}
+p{color:Blue}
+
+<divclass="box-1">Contenido 1</div> 
+<div class="box-2">Contenido 2</div>
+
+.box-1{
+  width: 100px;
+  height: 100px;
+  background: lime;
+  padding:50px;
+  margin: 20px;
+}
+
+.box-1{
+  margin: 200px;
+  width: 100px;
+  height: 100px;
+  background: lightcoral;
+}
