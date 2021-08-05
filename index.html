@@ -6,70 +6,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-  body{
- background:#dc8aa4;}
+  body{background-color:#F8E6F9;}
+  <title>Menu Desplegable</title>
+	<style type="text/css">
+			
+	*{margin:0px;padding:0px;}
+			
+  #header {margin:auto;
+		width:500px;
+	 font-family:Arial, Helvetica, sans-serif;}
+			
+	ul, ol {list-style:none;
+    width:500px}
+			
+	.nav > li {float:left;}
+			
+	.nav li a {background-color:#dc8aa4;
+				color:white;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+        width:100px}
+			
+	.nav li a:hover {background-color: rosybrown;}
+			
+	.nav li ul {display:none;
+				position:absolute;
+        width:500px;
+				}
+			
+	.nav li:hover > ul {display:block;}
+			
+	.nav li ul li {position:relative;}
+			
+	.nav li ul li ul {right:-140px;
+				top:0px;}
 
-  h1{color: blue;
-   font-family: verdana;
-   font-size: 300%;}
+.nav-enlace{background:rgb(238, 161, 187);
+  color:black;
+  padding:10px 30px;
+display:inline-block;}
 
-  p{color: white;
-   font-family: courier;
-   font-size: 160%;
-   border: 5px solid white;
-   padding: 10px;
-   margin: 10%;
-   width: 60%;}
- 
-.nav-enlace{display: inline-block;
- background: salmon; color:#fff;
- padding: 10px 30px;
- Width: 20%;}
- 
-.nav-enlace:hover {background: rosybrown;}
-nav{background: rebeccapurple; padding: 10px;
- Width: 100%;}
- 
-.main{Width: 60%;}
- 
-.aside{width:20%}
+.nav-enlace: hover{background:purple;}
 
-  </style>
+nav{background:#f8f1f7;
+  padding:15px 30px;
+  justify-content:space-around}
+
+  h1{border: 5px solid white;
+    padding: 10px;
+    margin: 10%;}
+
+.main{
+  width:60%;
+}
+
+footer{border: 5px solid white;
+    padding: 10px;
+    margin: 10%;}
+		</style>
 
   <title>FIKIEXPLOSION</title>
 
-  </header>
+  <header>
+  <h1>titulo principal</h1>
+</header>
+<body>
+<header>
+<p>Hola nuevo usuario, gracias por visitarnos!</p>
+</header>
 </head>
 <body>
-<div class="contenido">Hola nuevo usuario, gracias por visitarnos!
-<nav>
-<a href=" " class="nav-enlace">Inicio</a>
-<a href=" " class="nav-enlace">Nosotros</a>
-<a href=" " class="nav-enlace">Servicios</a>
-<a href=" " class="nav-enlace">Contacto</a>
-</nav>
-<main>
-<p>BIENVENIDOS A FIKIEXPLOSION</p>
+  <div id="header">
+    <ul class="nav">
+      <li><a href="">Inicio</a></li>
+      <li><a href="">Servicios</a>
+        <ul>
+          <li><a href="">Regalos</a></li>
+          <li><a href="">Sorpresas</a></li>
+          <li><a href="">fiestas tematicas</a></li>
+          <li><a href="">Detallitos</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="">Acerca de</a>
+      </li>
+      <li><a href="">Contacto</a></li>
+    </ul>
+  </div>
 
-<h2>Pulsa ingresa y descubriras nuevos universos</h2>
+  <main>
+<h1>Bienvenidos a FikiExplosion</h1>
+<img src="https://i.pinimg.com/236x/05/6a/64/056a644918292cb490a07ff02c117ced.jpg">
 
-<button type="button" onclick="alert('Me has cliqueado')">Ingresa</button>
+<p>Somos un emprendimiento que le encanta crear recuerdos. Tenemos cinco años de experiencia en decoracion de eventos, elaboracion de detalles,regalos y desayunos, todos personalizados para crear una experiencia unica.</p>
+  </main>
 
-<img src=;>
 
-</main>
-
-<aside>
-Regalos
-Detalles
-Sorpresas
-Fiestas tematicas
-Desayunos Sorpresas
-</aside>
-
-</div>
-<footer>direccion
-   Avenida Mirolindl
+<footer>
+  Direccion:
+   Avenida Mirolindo
+   Al lado del colegio champagnat
+  Cr 5a, ferrocaril...
 </footer>
 </body>
 </html>
