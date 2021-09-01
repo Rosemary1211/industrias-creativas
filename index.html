@@ -1,136 +1,321 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Patitas</title>
 
-  <style>
- 
-  body{background-color:#F8E6F9;}
-  <title>Menu Desplegable</title>
-	<style type="text/css">
-			
-	*{margin:0px;padding:0px;}
-			
-  #header {margin:auto;
-		width:500px;
-    font-family: 'STIX Two Text', serif;
-    }
-			
-	ul, ol {list-style:none;
-    width:500px}
-			
-	.nav > li {float:left;}
-			
-	.nav li a {background-color:#dc8aa4;
-				color:white;
-				text-decoration:none;
-				padding:10px 12px;
-				display:block;
-        width:100px}
-			
-	.nav li a:hover {background-color: rosybrown;}
-			
-	.nav li ul {display:none;
-				position:absolute;
-        width:500px;
-				}
-			
-	.nav li:hover > ul {display:block;}
-			
-	.nav li ul li {position:relative;}
-			
-	.nav li ul li ul {right:-140px;
-				top:0px;}
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 505x;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    z-index: 100;
+}
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+#nav-bar{
+    display: none;
+}
+header label{
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+h1{
+    float: left;
+}
+header .contenedor{
+    display: table;
+}
+.menu{
+position: absolute;
+width: 100%;
+height: 100vh;
+background: rgba(51,51, 51, 0.9);
+top: 50px;;
+left:0;
+transition: all 0.5s;
+transform: translateX(-100%);
+}
+#nav-bar:checked ~ .menu{
+    transform: translateX(0%);
+}
+.lista-menu li{
+    display:inline;
+    padding-left:3px;
+    padding-right:3px;
 
-.nav-enlace{background:rgb(238, 161, 187);
-  color:black;
-  padding:10px 30px;
-display:inline-block;}
+}
+.lista-menu li a{
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration:none ;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255,255, 0.5) ;
 
-.nav-enlace: hover{background:purple;}
+}
+.lista-menu li a:hover{
+    
+    background: rgba(255, 255,255, 0.3) ;
 
-nav{background:#f8f1f7;
-  padding:15px 30px;
-  justify-content:space-around}
-
-  h1{border: 5px solid white;
-    padding: 10px;
-    margin: 10%;
-    font-family: 'Style Script', cursive;}
-
-.main{
-  width:60%;
+}
+section{
+    width: 100%;
+    margin-bottom: 25px;
 }
 
-p{font-family: 'Dancing Script', cursive;}
+#banner{
+margin-top: 50px;
+position: relative;
+width: 100vw;
+}
+#banner img{
+    width: 100%;
+    height: 100%;
+}
+#banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translateX(-50%) translateY(-50%);
+    color: #fff;
+}
+#banner h2{
+    font-size: 25px;
+}
+#banner a{
+    display: block;
+    width: 100px;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 10px;
+    border: 3px solid #fff;
+}
+#banner a:hover{
+    
+    background: rgba(51,51, 51, 0.8);
+}
+#bienvenidos{
+    text-align: center;
+}
 
-footer{border: 5px solid white;
-    padding: 10px;
-    margin: 10%;
-    font-family: 'MonteCarlo', cursive;}
-		</style>
+#blog .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#blog article{
+    margin: 15px;
+}
+#blog img {
+    width: 100%;
+    max-width: 280px;
+}
+#blog h3, h4{
+    text-align: center;
+}
 
-  <title>FIKIEXPLOSION</title>
+#info{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+#info .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.info-pet{
+    margin: 20px;
+}
+.info-pet img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+}
+footer  .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
 
-  <header>
-  
-  <h1>titulo principal</h1>
-</header>
-<body>
-<header>
-<p>Hola nuevo usuario, gracias por visitarnos!</p>
-</header>
+.copy{
+    font-size: 20px;
+    
+}
+.sociales{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+
+}
+
+.sociales a {
+    color: #333;
+    text-decoration: none;
+
+}
+
+@media (min-width: 1024px){
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+
+    }
+    header label{
+        display: none;
+    }
+    
+    .lista-menu {
+        display:flex;
+        flex-wrap: wrap;
+    
+    }
+    .contenedor{
+        width: 1000px;
+    }
+    #banner img{
+        margin-top: -450px !important;
+    }
+    
+}
+@media (min-width: 480px){
+    #banner h2{
+        font-size: 50px;
+    }
+    #banner a {
+        margin-top: 25px;
+    }
+    
+    
+}
+@media (min-width: 768px){
+    #banner{
+        height: 300px;
+        overflow: hidden;
+    }
+    #banner img{
+        height: auto;
+        margin-top: -100px;
+
+    }
+    
+    
+}
+</style>
+
 </head>
 <body>
-  <div id="header">
-    <ul class="nav">
-      <li><a href="">Inicio</a></li>
-      <li><a href="">Servicios</a>
-        <ul>
-          <li><a href="">Regalos</a></li>
-          <li><a href="">Sorpresas</a></li>
-          <li><a href="">fiestas tematicas</a></li>
-          <li><a href="">Detallitos</a>
-          </li>
-        </ul>
-      </li>
-      <li><a href="">Acerca de</a>
-      </li>
-      <li><a href="">Contacto</a></li>
-    </ul>
-  </div>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
-  <main>
- 
-<h1>Bienvenidos a FikiExplosion</h1>
-<img src="https://i.pinimg.com/236x/05/6a/64/056a644918292cb490a07ff02c117ced.jpg">
+   <header>
+       <div class="contenedor"> 
+           <h1 class="icon-paw">Patitas</h1>
+           <input type="checkbox" id="nav-bar">
+           <label class="icon-menu" for="nav-bar"></label>
+           <nav class="menu">
+               <ul class="lista-menu">
+                   <li> <a href="#"> Inicio</a> </li>
+                   <li> <a href="#"> Mascotas</a> </li>
+                   <li> <a href="#"> Contantos</a> </li>
+                   <li> <a href="#"> Blog</a> </li>
+               </ul>
+           </nav>
+       </div>
+   </header>
+   <main>
+       <section id="banner">
+           <img src="img/pexels-photo-745045.jpeg" alt="">
+           <div class="contenedor">
+               <h2>Patitas</h2>
+               <p>Deja una huella en tu corazon</p>
+               <a href="#">leer más</a>
+           </div>
+       </section>
+       <section id="bienvenidos">
+        <h2>BIENVENIDO A NUESTRO REFUGIO</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas reiciendis eius repellendus dolore nisi maxime aperiam vel deleniti. Odit corporis ducimus magni quos consectetur aperiam fugiat neque quo veritatis quaerat.</p>
+       </section>
+       <section id="blog">
+           <h3>Temas en nuestro refugio</h3>
+           <div class="contenedor"> 
+                <article>
+                    <img src="img/pexels-photo-1904105.jpeg" alt="">
+                    <h4>Adopta a tu mascota ideal</h4>
+                </article>
+                <article>
+                    <img src="img/pexels-photo-321900.jpeg" alt="">
+                    <h4>Como cuidar a tu mascota</h4>
+                </article>
+                <article>
+                    <img src="img/chihuahua-dog-puppy-cute-39317.jpeg" alt="">
+                    <h4>Mi mascota, la mas graciosa</h4>
+                </article>
+           </div>
+          
+       </section>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+        <section id="info">
+            <h3>Conoce nuestros huespes. Estan en busca de un hogar amoroso</h3>
+            <div class="contenedor">
+                <div class="info-pet">
+                    <img src="img/pexels-photo-257519.jpeg" alt="">
+                    <h4>Docker</h4>
+                </div>
+                <div class="info-pet">
+                    <img src="img/pexels-photo-6291572.jpeg" alt="">
+                    <h4>Lulu y Lili</h4>
+                </div>
+                <div class="info-pet">
+                    <img src="img/pexels-photo-56733.jpeg" alt="">
+                    <h4>Lorenzo</h4>
+                </div>
+                <div class="info-pet">
+                    <img src="img/pexels-photo-4587955.jpeg" alt="">
+                    <h4>Mr bread</h4>
+                </div>
+            </div>
 
-<p>Somos un emprendimiento que le encanta crear recuerdos. Tenemos cinco años de experiencia en decoracion de eventos, elaboracion de detalles,regalos y desayunos, todos personalizados para crear una experiencia unica.
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        </section>       
+   </main>
+   <footer>
+       <div class="contenedor">
+           <p class="copy"> Patitas &copy; 2021</p>
+           <div class="sociales">
+               <a class="icon-facebook" href="#"></a>
+               <a class="icon-twitter" href="#"></a>
+               <a class="icon-instagram" href="#"></a>
+               <a class="icon-pinterest" href="#"></a>
 
-</p>
-
-  </main>
-
-
-<footer>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Style+Script&display=swap" rel="stylesheet">
-  Direccion:
-   Avenida Mirolindo
-   Al lado del colegio champagnat
-  Cr 5a, ferrocaril...
-</footer>
+           </div>
+       </div>
+   </footer>
 </body>
 </html>
